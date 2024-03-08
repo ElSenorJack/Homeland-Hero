@@ -71,7 +71,7 @@ public class CoordinateLabeler : MonoBehaviour
     }
     void DisplayCoordinates()
     {
-        if (gridManager == null) { return; }
+        if(gridManager == null) { return; }
         // vvv richiama le impostazioni selezionate della griglia 
         coordinates.x = Mathf.RoundToInt(transform.parent.position.x / gridManager.UnityGridSize);
         coordinates.y = Mathf.RoundToInt(transform.parent.position.z / gridManager.UnityGridSize);
