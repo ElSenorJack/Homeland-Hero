@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8298116221328366598}
   - component: {fileID: 1006955270181160127}
   m_Layer: 0
-  m_Name: cannon_upgrade_03
+  m_Name: Cannon Def
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,15 +28,15 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 403368}
   - {fileID: 436870}
   - {fileID: 497118}
   - {fileID: 458288}
   - {fileID: 447844}
   - {fileID: 425584}
+  - {fileID: 403368}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8298116221328366598
@@ -66,8 +66,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 403368}
-  range: 15
-  projectileParticles: {fileID: 0}
+  range: 25
+  projectileParticles: {fileID: 3288679478752411893}
 --- !u!1 &125388
 GameObject:
   m_ObjectHideFlags: 0
@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 3307326}
   - component: {fileID: 2366630}
   m_Layer: 0
-  m_Name: cannon_small_upgrade_03a
+  m_Name: cannon_Barrell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -496,7 +496,7 @@ GameObject:
   - component: {fileID: 3324880}
   - component: {fileID: 2314962}
   m_Layer: 0
-  m_Name: cannon_down
+  m_Name: cannon_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -594,8 +594,8 @@ Transform:
   m_GameObject: {fileID: 1783420614508201729}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000037745664, y: 0.013307029, z: 5.0233123e-10, w: 0.9999115}
-  m_LocalPosition: {x: 0, y: 0.76, z: -0.45}
-  m_LocalScale: {x: 0.2564318, y: 0.2564318, z: 0.2564318}
+  m_LocalPosition: {x: 0, y: 0.76, z: 0.854}
+  m_LocalScale: {x: 0.77019, y: 0.77019, z: 0.77019}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 403368}
@@ -1437,7 +1437,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.7
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4356,7 +4356,7 @@ ParticleSystem:
         m_RotationOrder: 4
     minKillSpeed: 0
     maxKillSpeed: 10000
-    radiusScale: 0.3
+    radiusScale: 0.5
     collidesWith:
       serializedVersion: 2
       m_Bits: 4294967295
