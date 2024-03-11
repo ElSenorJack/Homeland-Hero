@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 403368}
-  range: 25
+  range: 35
   projectileParticles: {fileID: 3288679478752411893}
 --- !u!1 &125388
 GameObject:
@@ -736,7 +736,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 45
       minScalar: 5
       maxCurve:
         serializedVersion: 2
