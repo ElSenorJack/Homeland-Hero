@@ -7,9 +7,11 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] int maxHP = 5;
-
     [Tooltip("Adds amount to Max HP on death")]
     [SerializeField] int difficultyUp = 3; //aumenta la vita di Enemy
+    [SerializeField] AudioClip demolish;
+
+    new AudioSource audio;
     int currentHP = 0;
 
     EnemyTag enemy;
@@ -21,6 +23,7 @@ public class Health : MonoBehaviour
     void Start()
     {
         enemy = GetComponent<EnemyTag>();
+        audio = GetComponent<AudioSource>();
     }
 
 
@@ -32,6 +35,7 @@ public class Health : MonoBehaviour
     void ProcessHit()
     {
         currentHP--;
+        audio.PlayOneShot(demolish);
 
         if (currentHP <= 0)
         {

@@ -9,6 +9,8 @@ public class Money : MonoBehaviour
     [SerializeField] int startingBlance = 150;
     [SerializeField] int currentBalance;
     [SerializeField] TextMeshProUGUI displayBalance;
+
+
     public int CurrentBalance {  get { return currentBalance; } }
     
 
@@ -31,7 +33,7 @@ public class Money : MonoBehaviour
 
     public void Withdraw(int amount)
     { 
-      currentBalance -= Mathf.Abs (amount);
+        currentBalance -= Mathf.Abs (amount);
         UpdateDisplay();
 
         if (currentBalance < 0)

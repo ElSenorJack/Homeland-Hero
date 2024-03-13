@@ -8,8 +8,8 @@ public class Targeting : MonoBehaviour
     [SerializeField] Transform weapon;
     [SerializeField] float range = 15f;
     [SerializeField] ParticleSystem projectileParticles;
-    Transform target;
 
+    Transform target;
 
     void Update()
     {
@@ -50,6 +50,6 @@ public class Targeting : MonoBehaviour
     void Attack(bool isActive)
     {
         var emissionModule = projectileParticles.emission;
-        emissionModule.enabled = isActive;     
+        emissionModule.enabled = isActive;
     }
 }

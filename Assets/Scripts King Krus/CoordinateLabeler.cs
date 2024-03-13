@@ -34,15 +34,15 @@ public class CoordinateLabeler : MonoBehaviour
             label.enabled = true;
         }
         SetLabelColor();
-        ToggleLabels();
+       // ToggleLabels();
     }
-    void ToggleLabels()
-    {
-        if(Input.GetKeyDown(KeyCode.C))
-        {
-            label.enabled = !label.IsActive();
-        }
-    }
+   // void ToggleLabels()
+   // {
+   //    if(Input.GetKeyDown(KeyCode.C))
+   //    {
+   //        label.enabled = !label.IsActive();
+   //    }
+   // }
 
     void SetLabelColor()
     {

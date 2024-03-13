@@ -6,12 +6,15 @@ public class EnemyTag : MonoBehaviour
 {
     [SerializeField] int moneyReward = 25;
     [SerializeField] int moneySteal = 25;
+    [SerializeField] AudioClip villageDamage;
 
+    new AudioSource audio;
 
     Money money;
     void Start()
     {
         money = FindObjectOfType<Money>();
+        audio = GetComponent<AudioSource>();
     }
     public void Reward()
     {
@@ -22,6 +25,7 @@ public class EnemyTag : MonoBehaviour
     public void Steal()
     {
         if (money == null) { return; }
+        audio.PlayOneShot(villageDamage);
         money.Withdraw(moneySteal);
     }
 }
