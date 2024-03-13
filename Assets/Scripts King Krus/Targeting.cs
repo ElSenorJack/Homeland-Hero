@@ -50,6 +50,6 @@ public class Targeting : MonoBehaviour
     void Attack(bool isActive)
     {
         var emissionModule = projectileParticles.emission;
-        emissionModule.enabled = isActive;
+        emissionModule.enabled = isActive;     
     }
 }
