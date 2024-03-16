@@ -29,7 +29,7 @@ public class Money : MonoBehaviour
         currentBalance += Mathf.Abs(amount);
         UpdateDisplay();
         //Mathf.Absolute serve a impedire che il valore si negativizzi se viene inserito un valore negativo
-        if (currentBalance > 1000) 
+        if (currentBalance >= 1000) 
         {
             Invoke("LoadNextScene", 2f);
         }
