@@ -5,9 +5,11 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
     [SerializeField] Tower towerPrefab;
-
     [SerializeField] bool isPlaceable;
-    public bool IsPlaceable { get { return isPlaceable; } } //why
+    [SerializeField] AudioClip buildSfx;
+    public bool IsPlaceable { get { return isPlaceable; } }
+
+    new AudioSource audio;
 
     GridManager gridManager;
     PathFinder pathFinder;
@@ -30,7 +32,18 @@ public class Tile : MonoBehaviour
                 gridManager.BlockNode(coordinates);
             }
         }
+
+        audio = GetComponent<AudioSource>();
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            audio.mute = !audio.mute;
+        }
+    }
+
     void OnMouseDown()
     {
         if (gridManager.GetNode(coordinates).isWalkable && !pathFinder.WillBlockPath(coordinates))
@@ -40,6 +53,7 @@ public class Tile : MonoBehaviour
             {
                 gridManager.BlockNode(coordinates);
                 pathFinder.NotifyReceivers();
+                audio.PlayOneShot(buildSfx);
             }            
         }
     }

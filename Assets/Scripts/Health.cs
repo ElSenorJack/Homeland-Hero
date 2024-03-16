@@ -23,7 +23,12 @@ public class Health : MonoBehaviour
     void Start()
     {
         enemy = GetComponent<EnemyTag>();
-        audio = GetComponent<AudioSource>();
+        audio = GetComponentInParent<AudioSource>();
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        { audio.mute = !audio.mute; }
     }
 
 

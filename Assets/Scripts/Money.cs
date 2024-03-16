@@ -28,7 +28,13 @@ public class Money : MonoBehaviour
     {
         currentBalance += Mathf.Abs(amount);
         UpdateDisplay();
-    }   //Mathf.Absolute serve a impedire che il valore si negativizzi se viene inserito un valore negativo
+        //Mathf.Absolute serve a impedire che il valore si negativizzi se viene inserito un valore negativo
+        if (currentBalance > 1000) 
+        {
+            Invoke("LoadNextScene", 2f);
+        }
+    }
+
 
 
     public void Withdraw(int amount)
@@ -46,6 +52,16 @@ public class Money : MonoBehaviour
     { 
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.buildIndex);
+    }
+    void LoadNextScene()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
+        if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
+        {
+            nextSceneIndex = 0;
+        }
+        SceneManager.LoadScene(nextSceneIndex);
     }
 }
 

@@ -6,12 +6,13 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     [SerializeField] int cost = 75;
-    [SerializeField] float buildDelay = 1f;
+    [SerializeField] float buildDelay = 0.7f;
 
     void Start()
     {
         StartCoroutine(Build());
     }
+
     public bool CreateTower(Tower tower, Vector3 position)
     {
         Money money = FindObjectOfType<Money>();

@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 933042691854720402}
+  - {fileID: 6180515011618321480}
   - {fileID: 436870}
   - {fileID: 497118}
   - {fileID: 458288}
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce105173c09b9f408d132d32ea56688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 75
+  cost: 100
   buildDelay: 1
 --- !u!114 &1006955270181160127
 MonoBehaviour:
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 403368}
-  range: 35
+  range: 25
   projectileParticles: {fileID: 3288679478752411893}
 --- !u!1 &125388
 GameObject:
@@ -5399,7 +5399,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!1 &7210463071966909554
+--- !u!1 &3132273662730135418
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5407,43 +5407,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 933042691854720402}
-  - component: {fileID: 6996614052290212988}
+  - component: {fileID: 6180515011618321480}
+  - component: {fileID: 5121705195553397431}
   m_Layer: 0
-  m_Name: Woodworking Edit
+  m_Name: WoodWork Sfx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &933042691854720402
+--- !u!4 &6180515011618321480
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7210463071966909554}
+  m_GameObject: {fileID: 3132273662730135418}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 443840}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &6996614052290212988
+--- !u!82 &5121705195553397431
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7210463071966909554}
-  m_Enabled: 1
+  m_GameObject: {fileID: 3132273662730135418}
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 697d120d0772d0348bcee55e33fcd76a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0

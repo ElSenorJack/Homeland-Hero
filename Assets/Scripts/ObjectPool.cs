@@ -9,6 +9,7 @@ public class ObjectPool : MonoBehaviour
     [SerializeField] [Range(0.1f , 30f)]float spawnTimer = 1.5f;
 
     GameObject[] pool;
+    new AudioSource audio;
 
     void Awake()
     {
@@ -18,6 +19,15 @@ public class ObjectPool : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnEnemy());
+        audio = GetComponentInChildren<AudioSource>();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            audio.mute = !audio.mute;
+        }
     }
 
     void PopulatePool()

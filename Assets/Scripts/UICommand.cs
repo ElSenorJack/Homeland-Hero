@@ -9,10 +9,12 @@ using UnityEngine.UI;
 public class UICommand : MonoBehaviour
 {
     TextMeshProUGUI instructions;
+    new AudioSource audio;
 
     void Start()
     {
         instructions = GetComponent<TextMeshProUGUI>();
+        audio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -31,6 +33,11 @@ public class UICommand : MonoBehaviour
             { instructions.enabled = true;  }
            
         }
+        
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            audio.mute = !audio.mute; 
+        }      
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {

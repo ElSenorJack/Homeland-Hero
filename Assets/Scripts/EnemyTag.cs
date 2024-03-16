@@ -14,8 +14,10 @@ public class EnemyTag : MonoBehaviour
     void Start()
     {
         money = FindObjectOfType<Money>();
-        audio = GetComponent<AudioSource>();
+        audio = GetComponentInParent<AudioSource>();
     }
+
+
     public void Reward()
     {
         if (money == null) {  return; }
@@ -25,7 +27,7 @@ public class EnemyTag : MonoBehaviour
     public void Steal()
     {
         if (money == null) { return; }
-        audio.PlayOneShot(villageDamage);
         money.Withdraw(moneySteal);
+        audio.PlayOneShot(villageDamage);
     }
 }
